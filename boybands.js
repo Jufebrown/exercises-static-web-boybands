@@ -1,36 +1,34 @@
-var bands = ["Boyz II Men", "NSync", "New Kids on the Block", "98 Degrees", "One Direction"];
-var vegetables = ["Carrots", "Kale", "Zucchini", "Broccoli", "Squash"];
+const bands = ["Boyz II Men", "NSync", "New Kids on the Block", "98 Degrees", "One Direction"];
+const vegetables = ["Carrots", "Kale", "Zucchini", "Broccoli", "Squash"];
 
 // The number of loops to perform (what if the array changes?)
-var loopCount = 5;
+const loopCount = 5;
 
 // Keep track of which band we're on in the loop
-var currentBand = "";
+let currentBand = "";
 
 // Keep track of which veggie we're on in the loop
-var currentVeggie = "";
+let currentVeggie = "";
 
 // Get a reference to the appropriate DOM element for bands
-var bandElement = document.getElementById("boy-bands");
+let bandElement = document.querySelector("#boy-bands");
 
 // Get a reference to the appropriate DOM element for vegetables
-var veggieElement = document.getElementById("vegetables");
+let veggieElement = document.getElementById("vegetables");
 
 // Start looping
 for (var loopTracker = 0; loopTracker < loopCount; loopTracker += 1) {
 
   // Add the band names into the correct <div>
-  var bandPara = document.createElement("p");
+  let bandPara = document.createElement("p");
   currentBand = bands[loopTracker];
   bandPara.innerText = currentBand;
   bandElement.appendChild(bandPara);
 
 
   // Add the veggie names into the correct <div>
-  var veggiePara = document.createElement("p");
+  let veggiePara = document.createElement("p");
   currentVeggie = vegetables[loopTracker];
   veggiePara.innerText = currentVeggie;
   veggieElement.appendChild(veggiePara);
-  
-
 }
